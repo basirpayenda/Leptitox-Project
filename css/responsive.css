@@ -1,0 +1,12 @@
+@media screen and (min-width: 768px) {
+  nav {
+    background-color: blue;
+  }
+  nav .navbar {
+    all: unset;
+  }
+  nav .burgers {
+    display: none;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
