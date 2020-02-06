@@ -75,10 +75,48 @@ ul {
   padding: 0;
 }
 
+img {
+  width: 60%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Rajdhani;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #4141c9;
+}
+
+.btn {
+  padding: 0.5rem;
+  background-color: #692081;
+  color: #f3f3f3;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.orange {
+  background-color: #eb4924;
+}
+
 /************************************
             Navigation Bar 
  ***********************************/
 nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,11 +126,11 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #eb4924;
+  background-color: #692081;
   min-height: 8vh;
   color: #f3f3f3;
-  -webkit-box-shadow: 0 2px 3px #813220;
-          box-shadow: 0 2px 3px #813220;
+  -webkit-box-shadow: 0 2px 3px #371244;
+          box-shadow: 0 2px 3px #371244;
   z-index: 9;
 }
 
@@ -107,7 +145,7 @@ nav .navbar {
   right: 0px;
   height: 92vh;
   width: 50vw;
-  background-color: #ed5b3a;
+  background-color: rgba(105, 32, 129, 0.97);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,7 +313,7 @@ nav .hamburger .line3 {
   position: fixed;
   right: 2rem;
   bottom: 2rem;
-  background-color: #813220;
+  background-color: #204981;
   color: #f3f3f3;
   font-size: 2rem;
   width: 4rem;
@@ -283,6 +321,9 @@ nav .hamburger .line3 {
   border-radius: 50%;
   border: none;
   outline: none;
+  z-index: 5;
+  -webkit-box-shadow: 0 0 2px #f3f3f3;
+          box-shadow: 0 0 2px #f3f3f3;
 }
 
 .newsletter-btn.hide {
@@ -312,6 +353,7 @@ nav .hamburger .line3 {
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
   border-radius: 50%;
+  z-index: 4;
 }
 
 .newsletter-overlay.active {
@@ -330,7 +372,7 @@ nav .hamburger .line3 {
   margin: 0 auto;
   padding: 1rem 0.5rem;
   text-align: center;
-  background-color: #cd201f;
+  background-color: #692081;
   border-radius: 0.5rem;
 }
 
@@ -340,17 +382,18 @@ nav .hamburger .line3 {
   right: -1rem;
   top: -1rem;
   color: #fff;
-  background-color: #eb4924;
+  background-color: #692081;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
   line-height: 3rem;
   text-align: center;
   cursor: pointer;
+  border: 1px solid #f3f3f3;
 }
 
 .newsletter-overlay .newsletter .newsltr-close:hover {
-  background-color: #813220;
+  background-color: #371244;
 }
 
 .newsletter-overlay .newsletter .enveloppe {
@@ -422,5 +465,154 @@ nav .hamburger .line3 {
 
 .newsletter-overlay .newsletter input[type="submit"]:hover {
   background-color: #ccc;
+}
+
+/* owl carousel */
+.owl-carousel {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+}
+
+.owl-carousel .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  text-align: center;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.owl-carousel .item .slide1 {
+  margin-top: -5vh;
+  padding: 1rem 2rem;
+}
+
+.owl-carousel .item .slide1 p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.owl-carousel .item img {
+  display: block;
+  margin-left: 10vw;
+  width: 60vw;
+}
+
+.owl-carousel .item .hide-on-sm {
+  display: none;
+}
+
+.owl-carousel .item .lep-logo {
+  position: relative;
+  margin-left: 20vw;
+  margin-bottom: 0.5rem;
+  width: 50vw;
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  position: relative;
+  top: -3rem;
+}
+
+/* First Slide */
+/* bigger screen */
+@media screen and (min-width: 768px) {
+  /* gloabl */
+  .btn-on-lg {
+    padding: 1rem 2rem;
+  }
+  .owl-carousel .item {
+    /* leptitox pack */
+  }
+  .owl-carousel .item .slide1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .owl-carousel .item .slide1 .btns .btn-on-large {
+    padding: 1rem 2rem;
+  }
+  .owl-carousel .item img {
+    display: block;
+    margin-left: 10vw;
+    width: 400px;
+  }
+  .owl-carousel .item .hide-on-large {
+    display: none;
+  }
+  .owl-carousel .item .lep-logo {
+    margin-left: 25vw;
+    margin-bottom: 0.5rem;
+    width: 250px;
+  }
+  .owl-carousel .item .leptitox-pack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .owl-carousel .item .leptitox-pack .leptitox-pack-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -2rem;
+  }
+  .owl-carousel .item .leptitox-pack .leptitox-pack-inner img {
+    width: 250px;
+    margin-left: 0.5rem;
+  }
+  .owl-carousel .item .leptitox-pack .logo-on-large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .owl-carousel .item .leptitox-pack .logo-on-large img {
+    width: 250px;
+    margin-left: -2rem;
+  }
+  .newsletter-overlay .newsletter {
+    padding: 1rem 3rem;
+  }
+  .newsletter-overlay .newsletter .title {
+    font-size: 2.5rem;
+  }
+  .newsletter-overlay .newsletter input[type="email"] {
+    padding: 1rem;
+    padding-left: 1.5rem;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+  .newsletter-overlay .newsletter input[type="submit"] {
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -41,7 +41,28 @@ newsltr_close.addEventListener("click", function() {
   newsletter_overlay.classList.toggle("active");
   newsletter_btn.classList.toggle("hide");
 });
-
+/* 
 setTimeout(function() {
   newsletter_btn.click();
-}, 10 * 1000);
+}, 30 * 1000); */
+
+/*******************************************
+            Landing Page slide show
+ *******************************************/
+
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 1
+    }
+  }
+});
