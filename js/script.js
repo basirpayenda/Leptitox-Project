@@ -1,4 +1,6 @@
-/* Navigation bar */
+/************************************
+            Navigation Bar
+ ***********************************/
 let navSlide = () => {
   let nav = document.getElementById("sidenav");
   let navlinks = document.querySelectorAll(".navbar-item");
@@ -23,7 +25,9 @@ let navSlide = () => {
 
 navSlide();
 
-/* Subscribe Form */
+/************************************
+            Subscribe Form
+ ***********************************/
 const newsletter_btn = document.querySelector(".newsletter-btn");
 const newsletter_overlay = document.querySelector(".newsletter-overlay");
 const newsltr_close = document.querySelector(".newsltr-close");
