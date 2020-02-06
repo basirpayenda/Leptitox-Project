@@ -56,15 +56,20 @@ body {
   padding: 0;
   font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
   overflow: hidden;
+  width: 100vw;
 }
 
-/* Global styles */
+/************************************
+            Global Styles
+ ***********************************/
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* navigation bar */
+/************************************
+            Navigation Bar 
+ ***********************************/
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -80,6 +85,7 @@ nav {
   color: #f3f3f3;
   -webkit-box-shadow: 0 2px 3px #813220;
           box-shadow: 0 2px 3px #813220;
+  z-index: 9;
 }
 
 nav .logo {
@@ -93,8 +99,7 @@ nav .navbar {
   right: 0px;
   height: 92vh;
   width: 50vw;
-  background-color: #eb4924;
-  opacity: 0.9;
+  background-color: #ed5b3a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,6 +119,7 @@ nav .navbar {
   transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
   list-style-type: none;
+  z-index: 9;
 }
 
 nav .navbar .navbar-item {
@@ -255,5 +261,154 @@ nav .hamburger .line3 {
   nav .burgers {
     display: none;
   }
+}
+
+.newsletter-btn {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  background-color: #813220;
+  color: #f3f3f3;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+.newsletter-btn.hide {
+  display: none;
+}
+
+.newsletter-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 4rem;
+  bottom: 4rem;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  border-radius: 50%;
+}
+
+.newsletter-overlay.active {
+  border-radius: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.newsletter-overlay .newsletter {
+  position: relative;
+  background-color: #fff;
+  width: 80%;
+  max-width: 576px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #cd201f;
+  border-radius: 0.5rem;
+}
+
+.newsletter-overlay .newsletter .newsltr-close {
+  font-size: 2rem;
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  color: #fff;
+  background-color: #eb4924;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  line-height: 3rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.newsletter-overlay .newsletter .newsltr-close:hover {
+  background-color: #813220;
+}
+
+.newsletter-overlay .newsletter .enveloppe {
+  display: block;
+  text-align: center;
+  font-size: 5rem;
+  color: #f3f3f3;
+}
+
+.newsletter-overlay .newsletter .title {
+  font-size: 1.5rem;
+  font-family: Rajdhani;
+  font-weight: 800;
+  color: #f3f3f3;
+  margin: 1rem 0;
+}
+
+.newsletter-overlay .newsletter form {
+  position: relative;
+}
+
+.newsletter-overlay .newsletter input[type="email"] {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 60px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding-right: 8rem;
+  font-size: 1rem;
+  color: #f3f3f3;
+}
+
+.newsletter-overlay .newsletter input[type="email"]::-webkit-input-placeholder {
+  color: #f3f3f3;
+  font-family: Montserrat;
+}
+
+.newsletter-overlay .newsletter input[type="email"]:-ms-input-placeholder {
+  color: #f3f3f3;
+  font-family: Montserrat;
+}
+
+.newsletter-overlay .newsletter input[type="email"]::-ms-input-placeholder {
+  color: #f3f3f3;
+  font-family: Montserrat;
+}
+
+.newsletter-overlay .newsletter input[type="email"]::placeholder {
+  color: #f3f3f3;
+  font-family: Montserrat;
+}
+
+.newsletter-overlay .newsletter input[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  border-radius: 60px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.newsletter-overlay .newsletter input[type="submit"]:hover {
+  background-color: #ccc;
 }
 /*# sourceMappingURL=style.css.map */
