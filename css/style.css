@@ -53,12 +53,14 @@
 
 html,
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
   width: 100vw;
   height: 100%;
   overflow-x: hidden;
+  line-height: 1.5;
 }
 
 .main-wrapper {
@@ -100,8 +102,22 @@ a {
   border-radius: 5px;
 }
 
-.mt-1 {
-  margin-top: 1rem;
+.btn-add-cart {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: #d72332;
+  -webkit-box-shadow: 2px 3px 1px 3px #ab273d;
+          box-shadow: 2px 3px 1px 3px #ab273d;
+}
+
+.btn-add-cart:hover, .btn-add-cart:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .highlight {
@@ -109,7 +125,16 @@ a {
 }
 
 .orange {
-  background-color: #eb4924;
+  background-color: #e6af4b;
+}
+
+.img-thumbnail {
+  padding: 5px;
+  border: 1px solid #f3f3f3;
+  -webkit-box-shadow: 0 0 3px #ccc;
+          box-shadow: 0 0 3px #ccc;
+  border-radius: 4px;
+  background-color: #f3f3f3;
 }
 
 /************************************
@@ -331,6 +356,11 @@ nav .hamburger .line3 {
 }
 
 .newsletter-overlay {
+  position: fixed;
+  right: 4rem;
+  top: 0;
+  left: 0;
+  bottom: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,11 +370,6 @@ nav .hamburger .line3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  right: 4rem;
-  bottom: 4rem;
-  width: 100%;
-  height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
@@ -354,6 +379,7 @@ nav .hamburger .line3 {
           transform-origin: bottom right;
   border-radius: 50%;
   z-index: 4;
+  visibility: hidden;
 }
 
 .newsletter-overlay.active {
@@ -362,6 +388,7 @@ nav .hamburger .line3 {
   bottom: 0;
   -webkit-transform: scale(1);
           transform: scale(1);
+  visibility: visible;
 }
 
 .newsletter-overlay .newsletter {
@@ -469,8 +496,6 @@ nav .hamburger .line3 {
 
 /* owl carousel */
 .owl-carousel {
-  position: absolute;
-  top: 0;
   height: 100vh;
 }
 
@@ -522,9 +547,77 @@ nav .hamburger .line3 {
   top: -3rem;
 }
 
+/* main content of website */
+.card {
+  width: 95%;
+  margin: 0 auto;
+  background: #e0eafc;
+  background: -webkit-gradient(linear, left top, right top, from(#cfdef3), to(#e0eafc));
+  background: linear-gradient(to right, #cfdef3, #e0eafc);
+  padding: 1rem 0;
+  border-radius: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card .card-title {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.card .card-content {
+  padding: 1rem;
+  font-family: Montserrat;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+/* foooter */
+footer {
+  background-color: #204981;
+  color: #f3f3f3;
+  padding: 2rem 1rem;
+}
+
+footer .contact-form {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 3px;
+  margin-top: 2rem;
+}
+
+footer .contact-form .input-group {
+  margin: 1rem 0;
+}
+
+footer .contact-form .input-group input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+}
+
+footer .contact-form .input-group textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+footer .contact-form .btn-contact {
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+}
+
 /* First Slide */
 /* bigger screen */
 @media screen and (min-width: 768px) {
+  .container {
+    width: 50%;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
   /* gloabl */
   .btn-on-lg {
     padding: 1rem 2rem;
@@ -613,6 +706,37 @@ nav .hamburger .line3 {
   .newsletter-overlay .newsletter input[type="submit"] {
     padding: 1rem 2rem;
     font-size: 1.3rem;
+  }
+  .card .card-title {
+    font-family: "Poppins", Arial;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #101010e2;
+  }
+  .card .card-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+  }
+  .card .card-inner .card-header {
+    width: 100%;
+  }
+  .card .card-inner .card-content {
+    margin-top: -1rem;
+    margin-left: 1rem;
+  }
+  .card:nth-child(odd) .card-inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .card:nth-child(even) .card-inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 /*# sourceMappingURL=style.css.map */
